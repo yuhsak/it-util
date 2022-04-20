@@ -1,5 +1,5 @@
-import { concat, filter, includes } from './iterable.js'
-import { not } from './util.js'
+import { concat, filter, includes } from './iterable'
+import { not } from './util'
 
 export const isin =
   <T>(b: Iterable<T>) =>

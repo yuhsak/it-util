@@ -1,5 +1,4 @@
-import { describe, test, expect } from 'vitest'
-import { reduce, value, IteratorTypeError, map } from '../src/iterable.js'
+import { reduce, value, IteratorTypeError, map } from '../src/iterable'
 
 function* g() {
   for (let i = 0; i < 10; i++) {

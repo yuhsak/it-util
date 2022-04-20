@@ -4,6 +4,7 @@
 /coverage
 
 /*.js
+!/jest.config.js
 /*.js.map
 /*.d.ts
 /*.d.ts.map
