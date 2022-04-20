@@ -15,20 +15,6 @@
   "main": "./lib/common/index.js",
   "module": "./lib/esm/index.js",
   "types": "./lib/types/index.d.ts",
-  "exports": {
-    ".": {
-      "types": "./lib/types/index.d.ts",
-      "require": "./lib/common/index.js",
-      "import": "./lib/esm/index.js",
-      "default": "./lib/common/index.js"
-    },
-    "./array": {
-      "types": "./lib/types/array.d.ts",
-      "require": "./lib/common/array.js",
-      "import": "./lib/esm/array.js",
-      "default": "./lib/common/array.js"
-    }
-  },
   "files": [
     "src",
     "lib",
