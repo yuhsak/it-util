@@ -1,4 +1,4 @@
-import * as I from './iterable'
+import * as I from './iterable.js'
 
 export const arr = <T>(g: Iterable<T>) => [...g]
 

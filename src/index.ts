@@ -1,3 +1,3 @@
-export * from './iterable'
-export * from './set'
-export * from './util'
+export * from './iterable.js'
+export * from './set.js'
+export * from './util.js'

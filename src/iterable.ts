@@ -1,4 +1,4 @@
-import { not } from './util'
+import { not } from './util.js'
 
 export class IteratorTypeError extends Error {
   constructor(public override message: string) {

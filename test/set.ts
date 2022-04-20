@@ -1,4 +1,5 @@
-import { and, or, difference, xor } from '../src/set'
+import { describe, test, expect } from 'vitest'
+import { and, or, difference, xor } from '../src/set.js'
 
 function* ga() {
   for (let i = 0; i < 10; i++) {
