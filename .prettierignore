@@ -1,0 +1,7 @@
+/lib/
+/coverage/
+*.md
+*.js
+*.js.map
+*.d.ts
+*.d.ts.map

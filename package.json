@@ -16,30 +16,39 @@
   "module": "lib/esm/index.js",
   "types": "lib/esm/index.d.ts",
   "files": [
-    "lib",
     "src",
-    "!lib/**/*.tsbuildinfo",
-    "tsconfig.json",
-    "tsconfig.esm.json"
+    "*.js",
+    "*.js.map",
+    "*.d.ts",
+    "*.d.ts.map",
+    "tsconfig.json"
   ],
   "scripts": {
-    "clean:dist": "rimraf lib",
+    "clean:dist": "rimraf *.js *.js.map *.d.ts *.d.ts.map",
     "clean:test": "rimraf coverage",
     "clean": "run-p clean:*",
     "pretest": "run-p clean:test",
-    "test": "jest --coverage",
+    "test": "jest",
+    "check:tsc": "tsc --noEmit",
+    "check:prettier": "prettier --check .",
+    "check": "run-p check:*",
     "prebuild": "run-p clean:dist",
     "build:watch": "npm run build -- --watch",
-    "build": "tsc -b tsconfig.json tsconfig.esm.json",
+    "build": "tsc -b tsconfig.json",
     "start": "npm run watch",
     "prepublishOnly": "npm run build"
   },
   "devDependencies": {
-    "typescript": "^4.0.3",
-    "jest": "26.5.2",
-    "ts-jest": "^26.4.1",
-    "@types/jest": "^26.0.14",
+    "@swc/core": "^1.2.170",
+    "@swc/helpers": "^0.3.8",
+    "@swc/jest": "^0.2.20",
+    "@types/jest": "^27.4.1",
+    "jest": "^27.5.1",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^2.6.2",
     "rimraf": "^3.0.2",
-    "npm-run-all": "^4.1.5"
-  }
+    "ts-jest": "^27.1.4",
+    "typescript": "^4.6.3"
+  },
+  "sideEffects": false
 }

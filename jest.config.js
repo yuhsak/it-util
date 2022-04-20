@@ -1,21 +1,24 @@
 module.exports = {
-  "roots": [
-    "<rootDir>/tests"
+  clearMocks: true,
+  roots: ["<rootDir>/test", "<rootDir>/src"],
+  testMatch: [
+    "**/test/**/*.(ts|tsx|js|jsx)",
+    "**/*.(spec|test).(ts|tsx|js|jsx)",
   ],
-  "testMatch": [
-    "**/tests/**/*.+(ts|tsx|js)",
-    "**/?(*.)+(spec|test).+(ts|tsx|js)"
-  ],
-  "testPathIgnorePatterns": [
-    "/node_modules/",
-    "__.*?\.(ts|tsx|js|jsx)$"
-  ],
-  "transform": {
-    "^.+\\.(ts|tsx)$": "ts-jest"
+  transform: {
+    "^.+\\.(t|j)sx?$": [
+      "@swc/jest",
+      {
+        sourceMaps: true,
+        jsc: {
+          externalHelpers: true,
+          target: "es2019",
+        },
+      },
+    ],
   },
-  "globals": {
-    "ts-jest": {
-      "tsConfig": "tsconfig.test.json"
-    }
-  }
-}
+  collectCoverage: true,
+  coverageDirectory: "coverage",
+  coverageProvider: "babel",
+  verbose: true,
+};

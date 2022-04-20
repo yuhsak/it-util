@@ -9,7 +9,28 @@ npm install it-util
 ## Usage
 
 ```ts
-import {flat, flatMap, map, filter, slice, concat, reduce, returnValue} from 'it-util'
+import {
+  reduce,
+  map,
+  filter,
+  flatMap,
+  flat,
+  fill,
+  entries,
+  keys,
+  values,
+  concat,
+  slice,
+  every,
+  some,
+  findIndex,
+  find,
+  indexOf,
+  includes,
+  forEach,
+  value,
+  asArray,
+} from 'it-util'
 
 function* gen() {
   yield [10, 11, 12]
@@ -43,5 +64,5 @@ const sliceGen = slice(concatGen, 1, 9)
 const reduceGen = reduce(sliceGen, (a, b) => a + b)
 
 // 66
-console.log(returnValue(reduceGen))
+console.log(value(reduceGen))
 ```
