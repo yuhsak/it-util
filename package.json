@@ -15,6 +15,10 @@
   "main": "./lib/common/index.js",
   "module": "./lib/esm/index.js",
   "types": "./lib/types/index.d.ts",
+  "exports": {
+    ".": "./lib/common/index.js",
+    "./array": "./lib/common/array.js"
+  },
   "files": [
     "src",
     "lib",
